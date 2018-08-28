@@ -3,8 +3,8 @@ swagger: "2.0"
 x-collection-name: Data.Gov
 x-complete: 0
 info:
-  title: Data.gov API Delete Reuses Reuse Badges Badge Kind
-  description: Delete a badge for a given reuse
+  title: Data.gov API Add Reuses Reuse Badges
+  description: Create a new badge for a given reuse
   version: "3"
 host: catalog.data.gov
 basePath: /api/3/
@@ -86,27 +86,6 @@ paths:
       - Reuses
       - Reuse
       - Badges
-  /reuses/{reuse}/badges/{badge_kind}/:
-    delete:
-      summary: Delete Reuses Reuse Badges Badge Kind
-      description: Delete a badge for a given reuse
-      operationId: deleteReusesReuseBadgesBadgeKind
-      x-api-path-slug: reusesreusebadgesbadge-kind-delete
-      parameters:
-      - in: path
-        name: badge_kind
-      - in: path
-        name: reuse
-        description: The reuse ID or slug
-      responses:
-        200:
-          description: OK
-      tags:
-      - Reuses
-      - Reuse
-      - Badges
-      - Badge
-      - Kind
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0
